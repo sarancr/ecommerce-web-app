@@ -1,30 +1,33 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>com.ecom</groupId>
-  <artifactId>ecommerce-web-app</artifactId>
-  <packaging>war</packaging>
-  <version>0.0.1-SNAPSHOT</version>
-  <name>ecommerce-web-app Maven Webapp</name>
-  <url>http://maven.apache.org</url>
-  
-    <build>
-        <finalName>eshop</finalName>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>2.5.1</version>
-                <inherited>true</inherited>
-                <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
-      
-   <properties>
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.ecom</groupId>
+	<artifactId>ecommerce-web-app</artifactId>
+	<packaging>war</packaging>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>ecommerce-web-app Maven Webapp</name>
+	<url>http://maven.apache.org</url>
+
+	<build>
+		<finalName>eshop</finalName>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.5.1</version>
+				<inherited>true</inherited>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+		</plugins>
+		<!-- <resources> <resource> <directory>src</directory> <includes> <include>**</include> 
+			</includes> <excludes> <exclude>**/*.java</exclude> </excludes> </resource> 
+			</resources> -->
+	</build>
+
+	<properties>
 		<jdk.version>1.8</jdk.version>
 		<junit.version>4.11</junit.version>
 		<log4j-api.version>2.6.2</log4j-api.version>
@@ -34,7 +37,7 @@
 		<jsp.version>2.1</jsp.version>
 		<servlet-version>3.1.0</servlet-version>
 	</properties>
-	
+
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
@@ -85,18 +88,32 @@
 			<version>${disruptor.version}</version>
 		</dependency>
 
-		<!-- Hibernate JPA provider -->
 		<dependency>
-		   <groupId>org.hibernate</groupId>
-		   <artifactId>hibernate-core</artifactId>
-		   <version>5.2.10.Final</version>
+			<groupId>org.eclipse.persistence</groupId>
+			<artifactId>eclipselink</artifactId>
+			<version>2.5.0</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.eclipse.persistence</groupId>
+					<artifactId>commonj.sdo</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
-		
+
 		<!-- https://mvnrepository.com/artifact/javax.mail/mail -->
-	<dependency>
-	    <groupId>javax.mail</groupId>
-	    <artifactId>mail</artifactId>
-	    <version>1.5.0-b01</version>
-	</dependency>
+		<dependency>
+			<groupId>javax.mail</groupId>
+			<artifactId>mail</artifactId>
+			<version>1.5.0-b01</version>
+		</dependency>
+
+
+		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.6</version>
+		</dependency>
+
 	</dependencies>
 </project>
