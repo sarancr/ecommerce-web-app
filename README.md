@@ -9,6 +9,9 @@ This is a eCommerce web application that provides the following features catalog
 - Allows to user the add item into a wish list for feature
 - Offers the following essential e-Commerce functionalities: Shopping cart, checkout, User login, Order history.
 
+## Live Demo:
+http://saracr.com/eshop/
+
 ## Architecture
 Three tier arhictecture has been used and the technologies used on each tier is listed below
 
@@ -22,13 +25,13 @@ Data base hosted on MYSQL server, but it does not matter, it should work fine wi
 ### Schema name: ecomdb
 ### Tables:                
     Address
-		Category
-		Order-header
-		Order-line
-		Product
-		Review
-		Subscriber
-		User
-		Wish-item
+    Category
+    Order-header
+    Order-line
+    Product
+    Review
+    Subscriber
+    User
+    Wish-item
 
 
